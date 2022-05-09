@@ -60,7 +60,7 @@ public partial class BitcoinTabSettingsViewModel : SettingsTabViewModelBase
 	public IEnumerable<Network> Networks { get; } = new[] { Network.Main, Network.TestNet, Network.RegTest };
 
 	private void ValidateBitcoinP2PEndPoint(IValidationErrors errors)
-		=> ValidateEndPoint(errors, BitcoinP2PEndPoint, Network.DefaultPort, whiteSpaceOk: true);
+		=> ValidateEndPoint(errors, BitcoinP2PEndPoint, Network.DefaultPort, whiteSpaceOk: false);
 
 	private static void ValidateEndPoint(IValidationErrors errors, string endPoint, int defaultPort, bool whiteSpaceOk)
 	{
@@ -74,7 +74,7 @@ public partial class BitcoinTabSettingsViewModel : SettingsTabViewModelBase
 	}
 
 	private void ValidateDustThreshold(IValidationErrors errors) =>
-		ValidateDustThreshold(errors, DustThreshold, whiteSpaceOk: true);
+		ValidateDustThreshold(errors, DustThreshold, whiteSpaceOk: false);
 
 	private static void ValidateDustThreshold(IValidationErrors errors, string dustThreshold, bool whiteSpaceOk)
 	{
