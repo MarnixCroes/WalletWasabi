@@ -44,7 +44,7 @@ public partial class AddWalletPageViewModel : DialogViewModelBase<Unit>
 			new AddWalletPageOption
 			{
 				CreationOption = WalletCreationOption.ConnectToHardwareWallet,
-				Title = "Connect to hardware wallet",
+				Title = "Connect to", "hardware wallet",
 				IconName = "calculator_regular"
 			},
 			new AddWalletPageOption
