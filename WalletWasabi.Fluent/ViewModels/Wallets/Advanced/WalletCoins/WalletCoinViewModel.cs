@@ -20,12 +20,13 @@ public partial class WalletCoinViewModel : ViewModelBase, IDisposable
 	[AutoNotify] private bool _isBanned;
 	[AutoNotify] private string? _bannedUntilUtcToolTip;
 
-	public WalletCoinViewModel(SmartCoin coin)
+	public WalletCoinViewModel(SmartCoin coin, Wallet wallet)
 	{
 		Coin = coin;
 		Amount = Coin.Amount;
 
 		Coin.WhenAnyValue(c => c.Confirmed).Subscribe(x => Confirmed = x).DisposeWith(_disposables);
+		Coin.WhenAnyValue(c => c.Confirmed).Subscribe(x => Confirmations = Coin.Height.Type == HeightType.Chain ? (int)wallet.BitcoinStore.SmartHeaderChain.TipHeight - Coin.Height.Value + 1 : 0).DisposeWith(_disposables);
 		Coin.WhenAnyValue(c => c.HdPubKey.Cluster.Labels).Subscribe(x => SmartLabel = x).DisposeWith(_disposables);
 		Coin.WhenAnyValue(c => c.HdPubKey.AnonymitySet).Subscribe(x => AnonymitySet = x).DisposeWith(_disposables);
 		Coin.WhenAnyValue(c => c.CoinJoinInProgress).Subscribe(x => CoinJoinInProgress = x).DisposeWith(_disposables);
