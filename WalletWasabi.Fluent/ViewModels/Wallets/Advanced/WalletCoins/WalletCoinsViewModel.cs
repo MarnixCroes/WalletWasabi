@@ -205,7 +205,7 @@ public partial class WalletCoinsViewModel : RoutableViewModel
 		_coinsSourceList.Edit(x =>
 		{
 			x.Clear();
-			x.AddRange(items.Select(coin => new WalletCoinViewModel(coin)));
+			x.AddRange(items.Select(coin => new WalletCoinViewModel(coin, _walletViewModel.Wallet)));
 		});
 	}
 }
