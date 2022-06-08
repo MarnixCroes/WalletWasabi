@@ -4,6 +4,12 @@ using System.Collections.Generic;
 using System.Reactive.Disposables;
 using WalletWasabi.Blockchain.Analysis.Clustering;
 using WalletWasabi.Blockchain.TransactionOutputs;
+using WalletWasabi.Fluent.Extensions;
+using WalletWasabi.Fluent.ViewModels.Dialogs;
+using WalletWasabi.Fluent.ViewModels.Navigation;
+using WalletWasabi.Fluent.ViewModels.Wallets.Send;
+using WalletWasabi.Fluent.Views.Wallets.Advanced.WalletCoins.Columns;
+
 
 namespace WalletWasabi.Fluent.ViewModels.Wallets.Advanced.WalletCoins;
 
