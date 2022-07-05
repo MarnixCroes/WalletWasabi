@@ -62,7 +62,7 @@
 
 <br>
 
-![](https://i.imgur.com/gI75EKu.png)
+![](https://user-images.githubusercontent.com/93143998/177392436-198469bb-3b86-4421-8c97-987e00fb40bf.png)
 
 # Build From Source Code
 
