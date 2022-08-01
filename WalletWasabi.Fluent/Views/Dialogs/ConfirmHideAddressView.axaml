@@ -19,6 +19,7 @@
         </Viewbox>
       </c:QuestionControl.IconContent>
         <StackPanel Spacing="10">
+          <TextBlock Items="{Binding Address}" />
           <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Do you wish to hide the address with the following labels?" />
           <c:LabelsListBox HorizontalAlignment="Center" Items="{Binding Label}" />
           <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="This can not be undone." />
