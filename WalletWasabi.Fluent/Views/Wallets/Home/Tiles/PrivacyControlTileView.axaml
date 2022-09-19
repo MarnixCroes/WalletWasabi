@@ -37,7 +37,8 @@
         </i:Interaction.Behaviors>
 
         <Button Classes="plain" Command="{Binding ShowDetailsCommand}"
-                ToolTip.Tip="Show Details">
+                ToolTip.Tip="Show Details"
+                IsEnabled="{Binding ShowPrivacyBar}"> 
           <ItemsControl Items="{Binding PrivacyBar.Items}" Height="10">
             <ItemsControl.Styles>
               <Style Selector="Path.private">
