@@ -310,7 +310,7 @@ public class WasabiJsonRpcService : IJsonRpcService
 	[JsonRpcMethod("listwallets", initializable: false)]
 	public object GetWallets()
 	{
-		return new Dictionary<int, int>();
+		return new ();
 	}
 
 	private void SelectWallet(string walletName)
