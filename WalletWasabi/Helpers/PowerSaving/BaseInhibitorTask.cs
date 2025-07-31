@@ -144,7 +144,7 @@ public class BaseInhibitorTask : IPowerSavingInhibitorTask
 	{
 		try
 		{
-			using CancellationTokenSource cts = new(TimeSpan.FromSeconds(5));
+			using CancellationTokenSource cts = new(TimeSpan.FromSeconds(30));
 			ProcessStartInfo processStartInfo = GetProcessStartInfo(command, "--help");
 			Process process = System.Diagnostics.Process.Start(processStartInfo)!;
 

@@ -18,7 +18,7 @@ public class SleepInhibitor : PeriodicRunner
 
 	private volatile IPowerSavingInhibitorTask? _powerSavingTask;
 
-	private SleepInhibitor(CoinJoinManager coinJoinManager, Func<Task<IPowerSavingInhibitorTask>>? taskFactory) : base(TimeSpan.FromSeconds(5))
+	private SleepInhibitor(CoinJoinManager coinJoinManager, Func<Task<IPowerSavingInhibitorTask>>? taskFactory) : base(TimeSpan.FromSeconds(30))
 	{
 		_coinJoinManager = coinJoinManager;
 		TaskFactory = taskFactory;
