@@ -1,0 +1,81 @@
+name: Bug report
+description: Submit a new bug report.
+labels: [bug]
+body:
+  - type: checkboxes
+    attributes:
+      label: Is there an existing issue for this?
+      description: Please search to see if an issue already exists for the bug you encountered.
+      options:
+      - label: I have searched the existing issues
+        required: true
+  - type: textarea
+    id: describe the issue
+    attributes:
+      label: Issue  behaviour
+      description: Tell us what went wrong
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behaviour
+    attributes:
+      label: Expected behaviour
+      description: Tell us what you expected to happen
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps to reproduce
+      description: |
+        Tell us how to reproduce your bug. Please attach related screenshots if necessary.
+        * Run-time or compile-time configuration options
+        * Actions taken
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: |
+        Please copy and paste any relevant log output or attach a debug log file.
+
+        You can find the debug.log in your [data dir.](https://github.com/bitcoin/bitcoin/blob/master/doc/files.md#data-directory-location)
+
+        Please be aware that the debug log might contain personally identifying information.
+    validations:
+      required: false
+  - type: dropdown
+    attributes:
+      label: How did you obtain Wasabi Wallet
+      multiple: false
+      options:
+        - Download from website
+        - Compiled from source
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: Wasabi-version
+    attributes:
+      label: What version of Wasabi Wallet are you using?
+      description: Run `wassabee --version` or in Wasabi use the searchbar at the top: ` > About Wasabi`
+      placeholder: e.g. Wasabi GUI 2.7.2
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system and version
+      placeholder: e.g. "MacOS 26.0" or "Ubuntu 26.04 LTS"
+    validations:
+      required: true
+  - type: textarea
+    id: machine-specs
+    attributes:
+      label: Machine specifications
+      descrition: |
+        What are the specifications of the host machine?
+        e.g. OS/CPU and disk type, network connectivity
+    validations:
+      required: false
